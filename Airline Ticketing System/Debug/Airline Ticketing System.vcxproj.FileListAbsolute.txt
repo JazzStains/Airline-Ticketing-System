@@ -1,1 +1,4 @@
 C:\Users\User\source\repos\Airline Ticketing System\Airline Ticketing System\Debug\Airline Ticketing System.vcxprojAssemblyReference.cache
+C:\Users\User\source\repos\Airline Ticketing System\Airline Ticketing System\Debug\AirlineTicketingSystem.TicketingSystem.resources
+C:\Users\User\source\repos\Airline Ticketing System\Airline Ticketing System\Debug\Airline Ticketing System.vcxproj.GenerateResource.cache
+C:\Users\User\source\repos\Airline Ticketing System\Airline Ticketing System\Debug\AirlineTicketingSystem.AddPassenger.resources
