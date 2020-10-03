@@ -1,6 +1,3 @@
-﻿  AddPassenger.cpp
-  Program.cpp
-  TicketingSystem.cpp
-  Generating Code...
-  AddPassenger.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+﻿  Program.cpp
+  Program.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Airline Ticketing System.vcxproj -> C:\Users\User\source\repos\Airline Ticketing System\Debug\Airline Ticketing System.exe

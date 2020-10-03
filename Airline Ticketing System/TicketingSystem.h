@@ -1,6 +1,6 @@
 #pragma once
 #include "AddPassenger.h"
-
+#include "PassengerProfile.h"
 namespace AirlineTicketingSystem {
 
 	using namespace System;
@@ -51,6 +51,7 @@ namespace AirlineTicketingSystem {
 	private: System::Windows::Forms::TextBox^ textBox3;
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
 
 	private:
 		/// <summary>
@@ -70,20 +71,21 @@ namespace AirlineTicketingSystem {
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// btnAddPassenger
 			// 
-			this->btnAddPassenger->Location = System::Drawing::Point(606, 59);
+			this->btnAddPassenger->Location = System::Drawing::Point(595, 56);
 			this->btnAddPassenger->Name = L"btnAddPassenger";
-			this->btnAddPassenger->Size = System::Drawing::Size(117, 47);
+			this->btnAddPassenger->Size = System::Drawing::Size(124, 43);
 			this->btnAddPassenger->TabIndex = 0;
 			this->btnAddPassenger->Text = L"Add Passenger";
 			this->btnAddPassenger->UseVisualStyleBackColor = true;
@@ -92,7 +94,7 @@ namespace AirlineTicketingSystem {
 			// listView1
 			// 
 			this->listView1->HideSelection = false;
-			this->listView1->Location = System::Drawing::Point(0, 171);
+			this->listView1->Location = System::Drawing::Point(6, 149);
 			this->listView1->Name = L"listView1";
 			this->listView1->Size = System::Drawing::Size(540, 356);
 			this->listView1->TabIndex = 5;
@@ -131,6 +133,15 @@ namespace AirlineTicketingSystem {
 			this->groupBox2->TabIndex = 9;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Search Passenger";
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(367, 65);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 14;
+			this->button1->Text = L"Search";
+			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// label4
 			// 
@@ -173,20 +184,22 @@ namespace AirlineTicketingSystem {
 			this->textBox2->Size = System::Drawing::Size(100, 22);
 			this->textBox2->TabIndex = 9;
 			// 
-			// button1
+			// button2
 			// 
-			this->button1->Location = System::Drawing::Point(367, 65);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
-			this->button1->TabIndex = 14;
-			this->button1->Text = L"Search";
-			this->button1->UseVisualStyleBackColor = true;
+			this->button2->Location = System::Drawing::Point(595, 484);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(124, 43);
+			this->button2->TabIndex = 10;
+			this->button2->Text = L"Open Profile";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &TicketingSystem::button2_Click);
 			// 
 			// TicketingSystem
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(772, 549);
+			this->Controls->Add(this->button2);
 			this->Controls->Add(this->btnAddPassenger);
 			this->Controls->Add(this->groupBox2);
 			this->Name = L"TicketingSystem";
@@ -199,12 +212,17 @@ namespace AirlineTicketingSystem {
 		}
 #pragma endregion
 	private: System::Void btnAddPassenger_Click(System::Object^ sender, System::EventArgs^ e) {
-		AddPassenger^ addPassanger = gcnew AddPassenger();
-		addPassanger->Show();
+		AddPassenger^ addPassenger = gcnew AddPassenger();
+		addPassenger->Show();
 	
 	}
+
 private: System::Void TicketingSystem_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	PassengerProfile^ passengerProfile = gcnew PassengerProfile();
+	passengerProfile->Show();
+}
 };
 }

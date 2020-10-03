@@ -1,4 +1,8 @@
   AirlineTicketingSystem.AddPassenger.resources - Embedded, ContainedInManifestFile, 
+  AirlineTicketingSystem.AddProfile.resources - Embedded, ContainedInManifestFile, 
+  AirlineTicketingSystem.AddTicket.resources - Embedded, ContainedInManifestFile, 
+  AirlineTicketingSystem.PassengerProfile.resources - Embedded, ContainedInManifestFile, 
+  AirlineTicketingSystem.SetTicket.resources - Embedded, ContainedInManifestFile, 
   AirlineTicketingSystem.TicketingSystem.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly Airline Ticketing System, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
@@ -15,7 +19,16 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Class AirlineTicketingSystem.AddProfile: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class AirlineTicketingSystem.AddPassenger: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class AirlineTicketingSystem.AddTicket: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class AirlineTicketingSystem.PassengerProfile: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class AirlineTicketingSystem.TicketingSystem: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

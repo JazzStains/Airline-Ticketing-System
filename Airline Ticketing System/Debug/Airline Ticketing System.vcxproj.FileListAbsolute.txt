@@ -2,3 +2,7 @@ C:\Users\User\source\repos\Airline Ticketing System\Airline Ticketing System\Deb
 C:\Users\User\source\repos\Airline Ticketing System\Airline Ticketing System\Debug\AirlineTicketingSystem.TicketingSystem.resources
 C:\Users\User\source\repos\Airline Ticketing System\Airline Ticketing System\Debug\Airline Ticketing System.vcxproj.GenerateResource.cache
 C:\Users\User\source\repos\Airline Ticketing System\Airline Ticketing System\Debug\AirlineTicketingSystem.AddPassenger.resources
+C:\Users\User\source\repos\Airline Ticketing System\Airline Ticketing System\Debug\AirlineTicketingSystem.PassengerProfile.resources
+C:\Users\User\source\repos\Airline Ticketing System\Airline Ticketing System\Debug\AirlineTicketingSystem.AddProfile.resources
+C:\Users\User\source\repos\Airline Ticketing System\Airline Ticketing System\Debug\AirlineTicketingSystem.AddTicket.resources
+C:\Users\User\source\repos\Airline Ticketing System\Airline Ticketing System\Debug\AirlineTicketingSystem.SetTicket.resources
