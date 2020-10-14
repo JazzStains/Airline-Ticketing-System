@@ -133,17 +133,26 @@
     <ClInclude Include="AddTicket.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="arrayListType.h" />
+    <ClInclude Include="ClassSeat.h" />
     <ClInclude Include="Date.h" />
+    <ClInclude Include="linkedList.h" />
     <ClInclude Include="Name.h" />
+    <ClInclude Include="Passenger.h" />
     <ClInclude Include="PassengerProfile.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Plane.h" />
     <ClInclude Include="SetTicket.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Ticket.h" />
     <ClInclude Include="TicketingSystem.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Time.h" />
+    <ClInclude Include="unorderedArrayListType.h" />
+    <ClInclude Include="unorderedLinkedList.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddPassenger.resx">

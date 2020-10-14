@@ -1,6 +1,14 @@
 #pragma once
 #include "AddPassenger.h"
 #include "PassengerProfile.h"
+#include "Passenger.h"
+#include <iostream>
+#include <fstream>
+#include "unorderedArrayListType.h"
+#include "Plane.h"
+
+unorderedArrayListType<Plane> airplanes(10);
+
 namespace AirlineTicketingSystem {
 
 	using namespace System;
@@ -40,7 +48,7 @@ namespace AirlineTicketingSystem {
 
 
 
-	private: System::Windows::Forms::ListView^ listView1;
+
 
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Label^ label1;
@@ -50,13 +58,18 @@ namespace AirlineTicketingSystem {
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::TextBox^ textBox3;
 	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::Button^ button1;
+
 	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::ListBox^ listBox1;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::Button^ button1;
 
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
+		
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
@@ -67,17 +80,19 @@ namespace AirlineTicketingSystem {
 		void InitializeComponent(void)
 		{
 			this->btnAddPassenger = (gcnew System::Windows::Forms::Button());
-			this->listView1 = (gcnew System::Windows::Forms::ListView());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -90,15 +105,6 @@ namespace AirlineTicketingSystem {
 			this->btnAddPassenger->Text = L"Add Passenger";
 			this->btnAddPassenger->UseVisualStyleBackColor = true;
 			this->btnAddPassenger->Click += gcnew System::EventHandler(this, &TicketingSystem::btnAddPassenger_Click);
-			// 
-			// listView1
-			// 
-			this->listView1->HideSelection = false;
-			this->listView1->Location = System::Drawing::Point(6, 149);
-			this->listView1->Name = L"listView1";
-			this->listView1->Size = System::Drawing::Size(540, 356);
-			this->listView1->TabIndex = 5;
-			this->listView1->UseCompatibleStateImageBehavior = false;
 			// 
 			// textBox1
 			// 
@@ -118,30 +124,23 @@ namespace AirlineTicketingSystem {
 			// 
 			// groupBox2
 			// 
+			this->groupBox2->Controls->Add(this->listBox1);
+			this->groupBox2->Controls->Add(this->label5);
+			this->groupBox2->Controls->Add(this->textBox4);
 			this->groupBox2->Controls->Add(this->button1);
 			this->groupBox2->Controls->Add(this->label4);
 			this->groupBox2->Controls->Add(this->label3);
 			this->groupBox2->Controls->Add(this->label2);
 			this->groupBox2->Controls->Add(this->textBox3);
 			this->groupBox2->Controls->Add(this->textBox2);
-			this->groupBox2->Controls->Add(this->listView1);
 			this->groupBox2->Controls->Add(this->textBox1);
 			this->groupBox2->Controls->Add(this->label1);
 			this->groupBox2->Location = System::Drawing::Point(12, 32);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(556, 505);
+			this->groupBox2->Size = System::Drawing::Size(556, 522);
 			this->groupBox2->TabIndex = 9;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Search Passenger";
-			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(367, 65);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
-			this->button1->TabIndex = 14;
-			this->button1->Text = L"Search";
-			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// label4
 			// 
@@ -186,7 +185,7 @@ namespace AirlineTicketingSystem {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(595, 484);
+			this->button2->Location = System::Drawing::Point(595, 490);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(124, 43);
 			this->button2->TabIndex = 10;
@@ -194,14 +193,48 @@ namespace AirlineTicketingSystem {
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &TicketingSystem::button2_Click);
 			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(366, 66);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(37, 22);
+			this->textBox4->TabIndex = 15;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(363, 91);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(42, 17);
+			this->label5->TabIndex = 16;
+			this->label5->Text = L"Suffix";
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(442, 66);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 14;
+			this->button1->Text = L"Search";
+			this->button1->UseVisualStyleBackColor = true;
+			// 
+			// listBox1
+			// 
+			this->listBox1->FormattingEnabled = true;
+			this->listBox1->ItemHeight = 16;
+			this->listBox1->Location = System::Drawing::Point(41, 137);
+			this->listBox1->Name = L"listBox1";
+			this->listBox1->Size = System::Drawing::Size(459, 340);
+			this->listBox1->TabIndex = 17;
+			// 
 			// TicketingSystem
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(772, 549);
-			this->Controls->Add(this->button2);
+			this->ClientSize = System::Drawing::Size(772, 580);
 			this->Controls->Add(this->btnAddPassenger);
 			this->Controls->Add(this->groupBox2);
+			this->Controls->Add(this->button2);
 			this->Name = L"TicketingSystem";
 			this->Text = L"TicketingSystem";
 			this->Load += gcnew System::EventHandler(this, &TicketingSystem::TicketingSystem_Load);

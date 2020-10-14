@@ -1,3 +1,11 @@
 ﻿  Program.cpp
+C:\Users\User\source\repos\Airline Ticketing System\Airline Ticketing System\Plane.h(43,7): warning C4101: 'letter': unreferenced local variable
+C:\Users\User\source\repos\Airline Ticketing System\Airline Ticketing System\unorderedLinkedList.h(176,39): warning C4101: 'og': unreferenced local variable
+C:\Users\User\source\repos\Airline Ticketing System\Airline Ticketing System\unorderedLinkedList.h(175): message : while compiling class template member function 'void unorderedLinkedList<Seat>::Swap_Nodes(Type &,Type &)'
+          with
+          [
+              Type=Seat
+          ]
+C:\Users\User\source\repos\Airline Ticketing System\Airline Ticketing System\ClassSeat.h(10): message : see reference to class template instantiation 'unorderedLinkedList<Seat>' being compiled
   Program.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Airline Ticketing System.vcxproj -> C:\Users\User\source\repos\Airline Ticketing System\Debug\Airline Ticketing System.exe
