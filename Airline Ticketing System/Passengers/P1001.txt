@@ -9,9 +9,9 @@ American
 Philippines
 Singapore
 10/20/2020
-0800
+08:00
 10/20/2020
-1600
+16:00
 PL01
 A01
 TEST

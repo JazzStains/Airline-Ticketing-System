@@ -130,10 +130,10 @@ void Passenger::writeInfo() // TBC
         {
             this->outFile_Passenger << this->ticketList[i].getOrigin() << endl
                 << this->ticketList[i].getDestination() << endl
-                << this->ticketList[i].getDepDate() << endl
-                << this->ticketList[i].getDepTime() << endl
-                << this->ticketList[i].getArrDate() << endl
-                << this->ticketList[i].getArrTime() << endl
+             //   << this->ticketList[i].getDepDate() << endl
+            //    << this->ticketList[i].getDepTime() << endl
+            //    << this->ticketList[i].getArrDate() << endl
+            //    << this->ticketList[i].getArrTime() << endl
                 << this->ticketList[i].getFlightNo() << endl
                 << this->ticketList[i].getGateNo() << endl;
         }
